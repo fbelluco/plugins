@@ -258,7 +258,7 @@ class Camera
 
     MediaRecorderBuilder mediaRecorderBuilder;
 
-    if (Build.VERSION.SDK_INT >= 31) {
+    if (Build.VERSION.SDK_INT >= 31 && Build.VERSION.SDK_INT < 33) {
       mediaRecorderBuilder = new MediaRecorderBuilder(getRecordingProfile(), outputFilePath);
     } else {
       mediaRecorderBuilder = new MediaRecorderBuilder(getRecordingProfileLegacy(), outputFilePath);
